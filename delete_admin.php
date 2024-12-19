@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Prevent deletion of the current super admin
     if ($adminEmail === $_SESSION['super_admin']['email']) {
         echo "You cannot delete yourself.";
-        exit();
+        exit(); 
     }
 
     // Delete admin from database
@@ -61,14 +61,17 @@ $conn->close();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delete Admin</title>
     <link rel="stylesheet" href="inde.css">
     <link rel="stylesheet" href="admin_panel.css">
+    <link rel="stylesheet" href="add_subject.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <header>
         <div class="logo-text">
@@ -109,8 +112,10 @@ $conn->close();
         <div class="ap_container">
             <h1>Delete Admin</h1>
             <form method="POST">
-                <label for="admin_email">Admin Email:</label>
-                <input type="email" id="admin_email" name="admin_email" required>
+                <div class="form-group">
+                    <label for="admin_email">Admin Email:</label>
+                    <input type="email" id="admin_email" name="admin_email" required>
+                </div>
                 <h3>Note: Deleting an admin is irreversible. Double-check the details before submission.</h3>
                 <div class="soption">
                     <input type="submit" value="Delete Admin">
@@ -163,4 +168,5 @@ $conn->close();
         }
     });
 </script>
+
 </html>

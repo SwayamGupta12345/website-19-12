@@ -52,40 +52,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Super Admin Login</title>
-    <style>
-            
-.cen{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.login-container {
-    justify-content: center;
-    align-items: center;
-
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    width: 300px;
-    text-align: center;
-    margin: 10px;
-}
-
-.login-container h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.login-container .form-group {
-    margin-bottom: 15px;
-    text-align: left;
-}
-    </style>
     <link rel="stylesheet" href="inde.css">
     <link rel="stylesheet" href="admin_panel.css">
+    <link rel="stylesheet" href="add_subject.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -106,9 +75,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <a class="home" href="index.php">HOME</a>
     </nav>
 
-    <div class="cen">
-        <div class="login-container">
-            <h2>Super Admin Login</h2>
+    <div class="main-content">
+        <div class="ap_container">
+            <h2 style="text-align: center; font-size: 30px;">Login</h2>
             <form id="loginForm" method="POST">
                 <div class="form-group">
                     <label for="email">Email</label><br>
@@ -122,7 +91,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <label for="secret">Secret Key</label><br>
                     <input type="text" id="secret" name="secret" required autocomplete="off">
                 </div>
-                <button type="submit" class="login-btn">Login</button>
+                <div class="soption">
+                    <button type="submit" class="login-btn">Login</button>
+                </div>
             </form>
         </div>
     </div>

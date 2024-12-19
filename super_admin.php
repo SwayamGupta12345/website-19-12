@@ -53,12 +53,8 @@ $stmt->close();
             <div></div>
             <div></div>
         </div>
-        <a class="home" href="index.php">HOME</a>
+        <a class="home" href="super_admin.php">HOME</a>
         <div class="nav-links" id="nav-links">
-
-        <span class="logout">
-            <a href="admin_panel.php" class="admin">Admin Panel</a>
-        </span>
         <span class="logout">
             <a href="super_admin.php" class="admin">Super Admin Panel</a>
         </span>
@@ -67,9 +63,6 @@ $stmt->close();
         $user_name = explode('@', $_SESSION['super_admin']['email'])[0]; ?>
         <span class="user-email">
             <?php echo $user_name; ?>
-        </span>
-        <span class="logout">
-            <a href="index1.php">Main Page</a>
         </span>
         <span class="logout">
             <a href="index.php?logout=true">Logout</a>

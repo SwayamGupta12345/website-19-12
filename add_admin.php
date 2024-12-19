@@ -25,7 +25,7 @@ if ($stmt->num_rows > 0) {
 } else {
     header("Location: index.php"); // Redirect if no admin record found
     exit();
-}// Check if form is submitted
+} // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = trim($_POST['subject']);
     $password = trim($_POST['apass']);
@@ -64,14 +64,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
     <link rel="stylesheet" href="inde.css">
     <link rel="stylesheet" href="admin_panel.css">
+    <link rel="stylesheet" href="add_subject.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <header>
         <div class="logo-text">
@@ -88,45 +91,47 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
         <a class="home" href="index.php">HOME</a>
         <div class="nav-links" id="nav-links">
-
-        <span class="logout">
-            <a href="admin_panel.php" class="admin">Admin Panel</a>
-        </span>
-        <span class="logout">
-            <a href="super_admin.php" class="admin">Super Admin Panel</a>
-        </span>
-        <?php
-        // Split the email and get the part before the "@"
-        $user_name = explode('@', $_SESSION['super_admin']['email'])[0]; ?>
-        <span class="user-email">
-            <?php echo $user_name; ?>
-        </span>
-        <span class="logout">
-            <a href="index1.php">Main Page</a>
-        </span>
-        <span class="logout">
-            <a href="index.php?logout=true">Logout</a>
-        </span>
-    </div>
+            <span class="logout">
+                <a href="admin_panel.php" class="admin">Admin Panel</a>
+            </span>
+            <span class="logout">
+                <a href="super_admin.php" class="admin">Super Admin Panel</a>
+            </span>
+            <?php
+            // Split the email and get the part before the "@"
+            $user_name = explode('@', $_SESSION['super_admin']['email'])[0]; ?>
+            <span class="user-email">
+                <?php echo $user_name; ?>
+            </span>
+            <span class="logout">
+                <a href="index1.php">Main Page</a>
+            </span>
+            <span class="logout">
+                <a href="index.php?logout=true">Logout</a>
+            </span>
+        </div>
     </nav>
 
-<div class="main-content">
-    <div class="ap_container">
-        <h1>Add New Admin</h1>
-        <form method="POST">
-            <label for="admin email">Admin Email:</label>
-            <input type="email" id="admin email" name="subject" required>
-            <label for="admin_pass">Admin password:</label>
-            <input type="password" id="admin_pass" name="apass" required>
-
-            <h3>Note: Check the details twice before submission.</h3>
-            <div class="soption">
-                <input type="submit" value="Add Admin">
-                <a href="super_admin.php" class="back">Return to Admin</a>
-            </div>
-        </form>
+    <div class="main-content">
+        <div class="ap_container">
+            <h1>Add New Admin</h1>
+            <form method="POST">
+                <div class="form-group">
+                    <label for="admin email">Admin Email:</label>
+                    <input type="email" id="admin email" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="admin_pass">Admin password:</label>
+                    <input type="password" id="admin_pass" name="apass" required>
+                </div>
+                <h3>Note: Check the details twice before submission.</h3>
+                <div class="soption">
+                    <input type="submit" value="Add Admin">
+                    <a href="super_admin.php" class="back">Return to Admin</a>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
     <?php include "footer.php"; ?>
 </body>
 <script>
@@ -169,8 +174,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             navLinks.classList.remove('show');
         }
     });
-
 </script>
+
 </html>
 
 <?php
