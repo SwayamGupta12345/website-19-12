@@ -1,9 +1,9 @@
 <?php 
 $servername = "localhost";
 $username = "root";
-$password = "";
-$dbname = "jlh";
-$port = "3306"; // Set this to your phpMyAdmin port if different
+$password = "root";
+$dbname = "elp";
+$port = "3307"; // Set this to your phpMyAdmin port if different
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname, $port);

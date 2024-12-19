@@ -8,7 +8,7 @@ if (!isset($_SESSION['user_email'])) {
 include 'connection.php';
 
 $email = $_SESSION['user_email'];
-
+include 'check_admin.php';
 // Fetch unique semesters for dropdown
 $semesters = [];
 $semQuery = $conn->query("SELECT DISTINCT sem FROM cards ORDER BY sem ASC");
