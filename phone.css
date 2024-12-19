@@ -1,0 +1,20 @@
+/* For very small screens (360px or smaller) */
+@media only screen and (max-width: 360px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+/* For small phones like iPhone SE (375px) */
+@media only screen and (max-width: 375px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* For mid-range phones (414px) */
+@media only screen and (max-width: 414px) {
+    body {
+        font-size: 16px;
+    }
+}

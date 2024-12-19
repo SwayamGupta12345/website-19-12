@@ -1,0 +1,346 @@
+/* Container Styling */
+.ap_container {
+    max-width: 650px;
+    margin: 1rem auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Header */
+.ap_container h1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: #363852;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+.ap_container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ap_container label {
+    font-size: 18px;
+    color: #444;
+    font-weight: 600;
+}
+
+.ap_container input[type="text"],
+.ap_container input[type="number"],
+.ap_container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #0c0b0b;
+    border-radius: 4px;
+    font-size: 15px;
+    Font-weight:500;
+}
+
+.ap_container textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+.ap_container form .sdata{
+    font-size:1em;
+}
+.ap_container form .sdata .sdata1{
+    font-size:0.8em;
+}
+/* Ensure both buttons appear inline */
+.soption {
+    display: flex;
+    gap: 30px; /* Adds a 20px gap between buttons */
+    align-items: center; /* Aligns buttons vertically center */
+}
+
+/* Styles for both submit and back buttons */
+.soption input[type="submit"], .soption .back {
+    background-color: var(--background-button); /* Primary button color */
+    color: var(--text-light); /* Light text color */
+    font-weight: bold;
+    width: 300px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth color and transform transition */
+    box-shadow: 0px 4px 6px var(--box-shadow-color); /* Subtle shadow */
+    font-size: 20px;
+}
+
+/* Hover effect for both submit and back buttons */
+.soption input[type="submit"]:hover, .soption .back:hover {
+    background-color: #354254; /* Darker shade for hover */
+    box-shadow: 0px 6px 8px var(--box-shadow-hover); /* Enhanced shadow on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Additional style for the 'Return to Admin' button */
+.soption .back {
+    background-color: var(--background-button); /* Matches other buttons */
+    color: var(--text-light);
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+/* Note */
+.ap_container h3 {
+    font-size: 17px;
+    font-weight: bold;
+    color: #888;
+    text-align: center;
+    margin: 10px;
+    word-spacing:1.5px;
+}
+
+.styled-select:focus {
+    border-color: #4CAF50; /* Change border color on focus */
+    outline: none; /* Removes outline */
+}
+.button-container {
+    display: flex;
+    gap: 10px; /* Adjust spacing between buttons as desired */
+    align-items: center; /* Align buttons vertically */
+    margin-top: 10px;
+}
+
+.btn-edit-news, .btn-return-admin {
+    padding: 8px 15px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-return-admin {
+    background-color: #6c757d; /* Different color for the Return button */
+}
+
+.btn-edit-news:hover, .btn-return-admin:hover {
+    background-color: #0056b3; /* Hover effect */
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+.form-group .sdata {
+    font-size:1em;
+}
+.form-group .sdata1 {
+    font-size:0.8em;
+}
+.button-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+}
+.btn-edit-news, .btn-return-admin {
+    padding: 8px 15px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+.btn-return-admin {
+    background-color: #6c757d;
+}
+.btn-edit-news:hover, .btn-return-admin:hover {
+    background-color: #0056b3;
+}
+.display{
+    display: none; 
+    margin-top: 25px;
+}
+.display h3{
+    font-weight: bold;
+    font-size:1.6em;
+    margin-top: -20px;
+}
+.display p{
+    gap:10px;
+}
+select{
+    padding: 8px 15px;
+    width:608px;
+}
+.select-op{
+    font-size: 15px;;
+}
+/* Media Queries for Medium Screens (Tablets, Small Laptops) */
+@media (min-width: 768px) and (max-width: 1200px) {
+    .ap_container {
+        max-width: 650px;
+        padding: 18px;
+        margin: 1rem auto;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .ap_container h1 {
+        font-size: 26px;
+        margin-bottom: 18px;
+    }
+
+    .ap_container form {
+        gap: 12px;
+    }
+
+    .ap_container label {
+        font-size: 17px;
+    }
+
+    .ap_container input[type="text"],
+    .ap_container input[type="number"],
+    .ap_container textarea {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .soption input[type="submit"],
+    .soption .back {
+        width: 80%;
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .button-container {
+        gap: 15px;
+    }
+
+    .btn-edit-news,
+    .btn-return-admin {
+        font-size: 15px;
+        padding: 12px 18px;
+    }
+
+    select {
+        width: 100%; /* Matches container width */
+        max-width: 650px; /* Ensures it doesn’t exceed the container */
+        font-size: 15px;
+        padding: 8px 12px;
+    }
+
+    .display h3 {
+        font-size: 1.4em;
+    }
+
+    .display p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .ap_container {
+        max-width: 90%;
+        padding: 15px;
+        margin: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .ap_container h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .ap_container form {
+        gap: 10px;
+    }
+
+    .ap_container label {
+        font-size: 16px;
+    }
+
+    .ap_container input[type="text"],
+    .ap_container input[type="number"],
+    .ap_container textarea {
+        font-size: 14px;
+        padding: 8p     x;
+    }
+
+    .soption input[type="submit"],
+    .soption .back {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .btn-edit-news,
+    .btn-return-admin {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    select {
+        width: 100%; /* Full width on small screens */
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .display h3 {
+        font-size: 1.2em;
+        margin-top: -10px;
+    }
+
+    .display p {
+        font-size: 14px;
+    }
+}
+
+/* Media Queries for Extra Small Screens */
+@media (max-width: 480px) {
+    .ap_container h1 {
+        font-size: 20px;
+    }
+
+    .ap_container label {
+        font-size: 14px;
+    }
+
+    .ap_container input[type="text"],
+    .ap_container input[type="number"],
+    .ap_container textarea {
+        font-size: 13px;
+        padding: 6px;
+    }
+
+    .soption input[type="submit"],
+    .soption .back {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .btn-edit-news,
+    .btn-return-admin {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    select {
+        width: 100%; /* Always matches container width */
+        font-size: 13px;
+        padding: 5px;
+    }
+}

@@ -1,0 +1,1570 @@
+:root {
+    /* Background Colors */
+    --background-main: #F2E9E4;
+    /* Updated with a light, warm ivory color */
+    --background-header-main-top: linear-gradient(180deg, #22223B, #4A4E69);
+    /* Dark to slightly lighter gradient based on palette */
+    --background-header-footer: #22223B;
+    /* Dark Blue for header and footer */
+    --background-button: #4A4E69;
+    /* Muted Blue for buttons */
+    --background-input: #C9ADA7;
+    /* Soft Beige for inputs */
+    --background-card: #FFFFFF;
+    /* Keep white or use #F2E9E4 for a softer card */
+    --background-dropdown: #FFFFFF;
+    --background-nav-links-mobile: #9A8C98;
+    /* Muted Purple for mobile nav links */
+    --background-nav-link-hover: rgba(34, 34, 59, 0.3);
+    /* Transparent Dark Blue for hover */
+    --navbar: #4A4E69;
+    /* Medium muted blue-gray from palette */
+
+    /* Text Colors */
+    --text-header: #22223B;
+    /* Deep navy from palette for main text */
+    --text-primary: #22223B;
+    /* Dark Blue for primary text */
+    --text-light: #F2E9E4;
+    /* Light Cream for lighter text */
+    --text-dropdown: #4A4E69;
+    /* Muted Blue for dropdown text */
+    --text-link: #4A4E69;
+    /* Muted Blue for links */
+    --text-link-hover: #22223B;
+    /* Dark Blue on link hover */
+    --text-card: #9A8C98;
+    /* Muted Purple for card text */
+
+    /* Border Colors */
+    --border-primary: #4A4E69;
+    /* Muted Blue for primary borders */
+    --border-card: #C9ADA7;
+    /* Soft Beige for card border */
+    --border-dropdown: #9A8C98;
+    /* Muted Purple for dropdown border */
+
+    /* Shadow Colors */
+    --box-shadow-color: rgba(34, 34, 59, 0.15);
+    /* Dark Blue shadow */
+    --box-shadow-hover: rgba(34, 34, 59, 0.3);
+    /* Darker shadow on hover */
+}
+
+* {
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+    margin: 0;
+    /* Remove default margins */
+    padding: 0;
+    /* Remove default padding */
+}
+
+body {
+    background-color: var(--background-main);
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-primary);
+    overflow-x: hidden;
+}
+
+/* General body and HTML styles */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* Ensure body takes full height */
+    display: flex;
+    flex-direction: column;
+    /* Use flexbox to manage layout */
+    overflow-x: hidden; /* Prevent horizontal overflow issues */
+}
+
+/* Main content wrapper */
+.main-content {
+    flex: 1;
+    /* Pushes the footer to the bottom */
+}
+
+hr {
+    border: 0;
+    height: 1px;
+}
+
+/* Header Styling */
+header {
+    background-color: var(--background-header-main-top);
+    background: var(--background-header-main-top);
+    color: var(--text-light);
+    padding: 10px 10px;
+    /* box-shadow: 0px 4px 8px var(--box-shadow-color); */
+    text-align: center;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height:125px;
+}
+
+.logo-text {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* Adjusts spacing between logo and text */
+}
+
+.logo-text img {
+    height: 90px;
+    /* Adjust for a more proportionate logo size */
+    width: 75px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.logo-text h1 {
+    font-size: 2.5rem;
+    /* Slightly larger for emphasis */
+    font-weight: 700;
+    margin: 0;
+    color: var(--text-light);
+}
+
+h2,
+h3 {
+    color: var(--text-primary);
+    /* Medium blue for headings */
+}
+
+.nav-bar {
+    display: flex;
+    position: relative;
+    left: 44.5%;
+    margin: 15px;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.login-but,
+.register-but {
+    margin: 0px 10px;
+    margin-right: 0px;
+    border-radius: 10px;
+    padding: 0px;
+}
+
+.login-but a,
+.register-but a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    border-radius: 10px;
+}
+
+.login-but a:hover,
+.register-but a:hover {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    border-radius: 10px;
+    color: black;
+}
+.special-string-info {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-style: italic;
+    text-align: center;
+}
+
+.register-form p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 15px;
+    text-align: center;
+}
+
+button {
+    background-color: var(--background-button);
+    /* Light blue for button background */
+    color: var(--text-light);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--text-link-hover);
+    /* Darker blue on hover */
+}
+
+input,
+select,
+textarea {
+    background-color: var(--background-input);
+    /* Aqua blue for input backgrounds */
+    color: var(--text-primary);
+    border: 1px solid var(--border-primary);
+    padding: 8px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+a {
+    color: var(--text-link);
+    text-decoration: none;
+}
+
+.ann_link {
+    color: rgb(99, 183, 208);
+}
+
+.ann_link:hover {
+    cursor: pointer;
+    color: #1a73e8;
+}
+
+a:hover {
+    color: var(--text-link-hover);
+}
+
+footer {
+    background-color: var(--background-main);
+    color: var(--border-primary);
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Card or Section Styling */
+.section {
+    background-color: var(--background-main);
+    border: 1px solid var(--border-primary);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+/* Header Title Styling */
+header h1 {
+    font-size: 2em;
+    margin: 0;
+    font-weight: bold;
+    color: var(--text-light);
+    letter-spacing: 1px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky; /* Default sticky behavior */
+    top: 0; 
+    background-color: var(--navbar);
+    padding: 8px 1rem;
+    box-shadow: 0 4px 6px var(--box-shadow-color);
+    z-index: 10;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+    width: 100%;
+}
+
+nav.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    background-color: var(--navbar-sticky); /* Slightly different shade for sticky */
+    padding: 6px 1rem; /* Smaller padding when sticky */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Slightly deeper shadow */
+}
+
+/* Placeholder element */
+.nav-placeholder {
+    height: 0; /* Default height */
+    transition: height 0.3s ease; /* Smooth height adjustment */
+}
+/* Style for navigation links */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav-links.show {
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    background: linear-gradient(#22223B, #4A4E69);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    /* width: auto; */
+    /* Width adjusts based on content */
+    padding: 15px 20px;
+    /* Adjust padding for balanced spacing */
+    align-items: flex-start;
+    /* Align items to the left for better layout */
+    gap: 10px;
+    /* Add spacing between items */
+}
+
+.nav-links select {
+    padding: 5px;
+    font-size: 1em;
+    color: var(--text-primary);
+    background-color: var(--background-dropdown);
+    border: 1px solid var(--border-dropdown);
+    border-radius: 5px;
+}
+
+.admin,
+.user-email,
+.logout {
+    color: var(--text-light);
+    font-size: 16px;
+    letter-spacing: 0.25px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    margin-left: 0.5px;
+    gap: 5px;
+}
+
+.admin:hover {
+    color: black;
+    background-color: white;
+    padding: 5px 10px;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.nav-links a:hover {
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+}
+
+
+
+/* Mobile View for Header */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .logo-text img {
+        height: 100px;
+        width: 80px
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .nav-links select {
+        max-width: 100%;
+        font-size: 1em;
+    }
+}
+
+/* Styling for Semester Select Dropdown */
+#semester-menu {
+    width: 100%;
+    max-width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    color: var(--text-primary);
+    background-color: var(--background-dropdown);
+    border: 1px solid var(--border-dropdown);
+    border-radius: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#semester-menu:focus {
+    border-color: var(--text-link-hover);
+    box-shadow: 0 0 5px var(--box-shadow-color);
+}
+
+#semester-menu option {
+    padding: 10px;
+    color: #333;
+    background-color: var(--background-dropdown);
+    border-bottom: 1px solid var(--border-dropdown);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-light);
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a.home {
+    margin:0px auto 0px 0.5px;
+    padding: 5px 10px;
+    font-size: 1.1rem;;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    color: var(--text-link-hover);
+    background-color: white;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+    left: 0.5rem;
+}
+
+.burger div {
+    background-color: var(--text-light);
+    height: 0.25rem;
+    width: 1.5rem;
+    margin: 0.2rem 0;
+    border-radius: 0.1rem;
+    transition: 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex-grow: 1;
+    gap: 1rem;
+    font-size: large;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-links a {
+    display: block;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;  
+    gap: 20px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container img {
+    flex: 1;
+    border-radius: 1rem;
+        /* Rounded corners */
+        max-width: 75%;
+        /* Ensure the image does not exceed its container's width */
+        position: relative;
+        left: 5vw;
+        height: auto;
+        /* Maintain aspect ratio */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        /* Adds a subtle shadow */
+        margin: 0.5rem;
+        /* Margin around the image */
+        padding: 1.5vw;
+        /* Padding using viewport width for consistency */
+        object-fit: contain;
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+
+    .container p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        text-align:justify;
+    }
+
+.sems {
+    background: var(--background-button);
+    height: 3.5rem;
+    width: 100%;
+    border: 3px solid var(--text-light);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    box-shadow: 0 4px 6px var(--box-shadow-color);
+}
+
+.SEMTEXT {
+    text-align: center;
+    font-size: 1.25rem;
+    color: var(--text-light);
+    font-weight: bold;
+}
+
+/* Default layout for large screens (4 cards per row) */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.card {
+    background: var(--background-card);
+    border-radius: 1rem;
+    border-style: groove;
+    border-color: var(--border-card);
+    box-shadow: 0 6px 12px var(--box-shadow-color);
+    width: 24%;
+    /* Four cards per row on large screens */
+    height: 350px;
+    min-height:250px;
+    min-width: 130px;
+    max-width: 200px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1rem 1.1rem 3rem 0.5rem;
+    margin: 1rem;
+}
+
+.card img {
+    width: 100%;
+    height: 120px;
+    /* Set a fixed height to ensure uniformity */
+    object-fit: cover;
+    /* Fill the area while maintaining the aspect ratio */
+    border-style: solid;
+    border-color: var(--border-primary);
+    border-bottom: 2px solid var(--border-primary);
+    border-radius: 1rem;
+    overflow: hidden;
+    /* Ensures no overflow if images are larger */
+}
+
+.card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+}
+
+.card p {
+    padding: 0 1rem 1rem;
+    font-size: 1rem;
+    color: var(--text-card);
+}
+
+.card a {
+    text-decoration: none;
+    color: var(--text-link);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.card a:hover {
+    color: var(--text-link-hover);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px var(--box-shadow-hover);
+}
+#show-register-login, #login-button {
+    text-decoration: underline;
+    color: #0056B3; /* Non-hover color */
+}
+
+#show-register-login:hover, #login-button:hover {
+    color: #0000EE; /* Hover color */
+}
+
+/* Medium screens: 4 cards per row */
+@media (max-width: 1132px) {
+    
+        .head {padding:1rem;
+            margin-left: 2.5dvw;
+        }
+    .container {
+        gap: 10px;
+        padding: 1rem;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .nav-bar {
+        display: flex;
+        position: relative;
+        left: 42.5%;
+        margin: 15px;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+
+    .login-but,
+    .register-but {
+        margin: 0px 10px;
+        margin-right: 0px;
+        border-radius: 10px;
+        padding: 0px;
+    }
+
+    .login-but a,
+    .register-but a {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 5px 10px;
+        font-size: 1.25rem;
+        font-weight: 400;
+        border-radius: 10px;
+    }
+
+    .login-but a:hover,
+    .register-but a:hover {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1.25rem;
+        font-weight: 400;
+        border-radius: 10px;
+        color: black;
+    }
+
+    .card {
+        width: 30%;
+    }
+
+    .card-container {
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+}
+
+@media(max-width: 900px) {
+   
+    .head {
+        font-size:1.5rem;
+        padding:1rem;
+            margin-left: 2.5dvw;
+    } 
+    .container p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .nav-bar {
+        position: relative;
+        left: 41%;
+    }
+}
+
+/* Adjust card layout at 800px */
+@media (max-width: 800px) {
+    
+    .head {
+        padding:1rem;
+        margin-left: 2.5dvw;
+    }
+    .container {
+        max-width: 700px;
+        margin: 0 auto;
+        padding:1rem;
+    }
+
+    .container img {
+        flex: 1;
+        /* Adjusts space allocation for the image within flex container */
+        border-radius: 1rem;
+        /* Rounded corners */
+        max-width: 75%;
+        /* Ensure the image does not exceed its container's width */
+        position: relative;
+        left: 5vw;
+        height: auto;
+        /* Maintain aspect ratio */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        /* Adds a subtle shadow */
+        margin: 0.5rem;
+        /* Margin around the image */
+        padding: 1vw;
+        /* Padding using viewport width for consistency */
+        object-fit: contain;
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+
+    .container p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    nav a.home{
+        margin-left:25px;
+    }
+    .nav-bar {
+        display: flex;
+        position: relative;
+        left: 40%;
+        margin: 15px;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+
+    .login-but,
+    .register-but {
+        margin: 0px 10px;
+        margin-right: 0px;
+        border-radius: 10px;
+        padding: 0px;
+    }
+
+    .login-but a,
+    .register-but a {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 4px 8px;
+        font-size: 1.1rem;
+        font-weight: 400;
+        border-radius: 10px;
+    }
+
+    .login-but a:hover,
+    .register-but a:hover {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1.1rem;
+        font-weight: 400;
+        border-radius: 10px;
+        color: black;
+    }
+
+    .card {
+        width: 40%;
+        height: 330px;
+    }
+
+    .card-container {
+        gap: .15rem;
+        padding: .15rem;
+    }
+
+    .card img {
+        width: 90%;
+        height: 125px;
+        /* Set a fixed height to ensure uniformity */
+        object-fit: cover;
+        /* Fill the area while maintaining the aspect ratio */
+        border-style: solid;
+        border-color: var(--border-primary);
+        border-bottom: 2px solid var(--border-primary);
+        border-radius: .75rem;
+        overflow: hidden;
+        /* Ensures no overflow if images are larger */
+    }
+
+    .card h3 {
+        margin: 0.15rem 0;
+        font-size: 1.3rem;
+        color: var(--text-primary);
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        /* Center align items */
+        width: 40%;
+        position: absolute;
+        top: 2.6rem;
+        left: 0;
+        background-color: var(--background-header-main-top);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        padding: 1rem;
+    }
+
+    .nav-links.show {
+        display: flex;
+        align-items: center;
+    }
+
+    .user-email,
+    .user-email:hover,
+    .logout,
+    .logout:hover {
+        margin-left: 5px;
+        ;
+        width: 160px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-links a {
+        width: 130px;
+        /* Fixed width */
+        height: 40px;
+        /* Fixed height */
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        /* Remove padding to keep size fixed */
+        margin: 1px;
+        /* Remove side margin to center items */
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        /* Smooth color transition, but color remains the same */
+    }
+    .logout,
+    .logout:hover {
+        width: 160px;
+        height: 40px;
+    }
+
+    .burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        cursor: pointer;
+    }
+
+    .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 3px 0;
+    }
+}
+@media (max-width: 650px){
+    .container img {
+    flex: 1;
+    min-width:90px;
+    max-width: 75%;
+    position: relative;
+    left: 5vw;
+    height: auto;
+    min-height:90px;
+}}
+@media (max-width: 480px) {
+    .container img {
+        flex: 1;
+        display: block; /* Ensure visibility */
+        min-width: 90px;
+        max-width: 75%;
+        height: auto;
+        min-height: 90px;
+        position: relative;
+        left: 1vw;
+    }
+    .nav-links {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        /* Center-align items */
+        padding: 0.5rem;
+        /* Full width on small screens */
+        position: absolute;
+        background-color: var(--background-header-main-top);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        z-index: 10;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    .nav-links.show {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-links a {
+        width: 100%;
+        /* Fixed width */
+        height: 40px;
+        /* Fixed height */
+        font-size: 1rem;
+        padding: 0.8rem 0;
+        margin: 0;
+        /* Remove margin to center items */
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        display: block;
+        /* Ensure it's block-level for consistent sizing */
+    }
+
+    .burger {
+        display: flex;
+        cursor: pointer;
+    }
+
+    .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 3px 0;
+    }
+
+    body {
+        font-size: 16px;
+    }
+    input#end_date, input#start_date{
+        width: 100%;
+    }
+}
+
+@media (max-width: 387px) {
+    .head {
+        display: flex; /* Enables Flexbox */
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center; /* Vertically centers the content */
+       
+        padding:1rem;
+        margin-left: 0px;
+        margin-left: 0; /* Keeps the margin consistent */
+        text-align: center; /* Ensures multi-line text is also centered */
+    }
+    .container {
+        grid-template-columns: 1fr; /* Override grid layout to single column */
+    }
+    .container img {
+        display: none; 
+    }
+    .container p {
+        width: 100%; /* Allow the <p> to take full container width */
+        font-size: 1rem;
+        line-height: 1.4;
+        text-align:justify;
+    }
+
+    .card {
+        width: 25%;
+        height: 280px;
+    }
+
+    .card-container{
+        gap: 0rem;
+        /* padding: .08rem; */
+    }
+    .card img {
+        width: 105%;
+        height: 110px;
+        /* Set a fixed height to ensure uniformity */
+        object-fit: cover;
+        /* Fill the area while maintaining the aspect ratio */
+        border-style: solid;
+        border-color: var(--border-primary);
+        border-bottom: 2px solid var(--border-primary);
+        border-radius: .5rem;
+        overflow: hidden;
+        /* Ensures no overflow if images are larger */
+    }
+
+    .card h3 {
+        margin: 0.125rem 0;
+        font-size: 0.9rem;
+        color: var(--text-primary);
+    }
+
+    .card p {
+        padding: 0 .25rem .25rem;
+        font-size: .80rem;
+        color: var(--text-card);
+    }
+    .ad{
+        font-size:1rem;
+        height:100px;
+        min-height:80px;
+    }
+}
+
+footer {
+    background-color: var(--background-header-footer);
+    color: var(--text-light);
+    padding: 2rem 2rem 0px 2rem;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    /* Adjust left and right padding for even spacing */
+    width: 100%;
+    /* Ensures the container spans the full width */
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two columns, each takes half of the width */
+    gap: 2rem;
+    /* Adds space between columns */
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    margin-right: 1.2rem;
+    object-fit: cover;
+}
+
+.footer-details h4 {
+    margin: 0 0 0.5rem 0;
+}
+
+.footer-item p {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+
+}
+
+.footer-item ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-item ul li {
+    margin: 0.5rem 0;
+}
+
+.footer-item a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-item a:hover {
+    color: var(--text-light);
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        /* Stack items on smaller screens */
+        padding: 0.05dvh;
+    }
+
+    .footer-item {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+@media (max-width: 330px) {
+    footer {
+        background-color: var(--background-header-footer);
+        color: var(--text-light);
+        padding: .5rem .5rem 0px .5rem;
+        text-align: center;
+ 
+    }
+    .footer-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 2rem 1rem 1rem 1rem;
+        /* Adjust left and right padding for even spacing */
+        width: 100%;
+        /* Ensures the container spans the full width */
+    }}
+.login-form,
+.register-form {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    /* Start off-screen */
+    width: 400px;
+    height: 100%;
+    background-color: var(--background-card);
+    box-shadow: -2px 0 5px var(--box-shadow-color);
+    transition: right 0.3s ease;
+    /* Animation for sliding */
+    padding: 2rem;
+    z-index: 1000;
+    /* Ensure it appears on top */
+    display: flex;
+    flex-direction: column;
+    /* Stack children vertically */
+    justify-content: center;
+    /* Center children vertically */
+    align-items: center;
+    /* Center children horizontally */
+    padding-left: 2rem;
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.login-form.active,
+.register-form.active {
+    right: 0;
+    /* Slide in */
+}
+
+.login-form h2,
+.register-form h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+    /* Center heading text */
+}
+
+.login-form input,
+.register-form input {
+    width: 100%;
+    /* Full width of the form */
+    max-width: 400px;
+    /* Optional: set a max width */
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.login-form button,
+.register-form button {
+    width: 100%;
+    /* Full width of the form */
+    max-width: 400px;
+    /* Optional: set a max width */
+    padding: 1rem;
+    background-color: var(--background-button);
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+    transition: background-color 0.3s ease;
+    align-items: center;
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+.flex-col .close-button {
+    height: 20px;
+    position: absolute; 
+    right: 25px;
+    top:50px;
+    width: 20px;
+}
+
+.login-form button:hover,
+.register-form button:hover {
+    background-color: var(--text-link-hover);
+}
+
+.flex-col .close-button:hover {
+    color: white;
+}
+
+.login-form .close-button,
+.register-form .close-button {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+}
+
+.register-form.active {
+    right: 0;
+    /* Slide in */
+}
+
+@media(max-width:600px){
+    .profile-image {
+        width: 70px;
+        height: 70px;
+        margin-right: 1.2rem;
+        object-fit: cover;
+    }
+    .nav-bar {
+        position: relative;
+        left: 38%;
+    }
+
+    .login-but a,
+    .register-but a {
+        font-size: 1.05rem;
+    }
+
+    .login-but a:hover,
+    .register-but a:hover {
+        font-size: 1.05rem;
+    }
+}
+@media (max-width: 500px){.nav-bar{
+    position: relative;
+    left: 32%;
+}}
+/* Styling for mobile screens (500px or less) */
+@media (max-width: 437px) {
+    
+    .login-form,
+    .register-form {
+        border-top-left-radius: 0rem;
+        border-bottom-left-radius: 0rem;
+    }
+    .login-form.active,
+    .register-form.active {
+        right: 0;
+        /* Start from the right side, no off-screen */
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        border-radius: 0;
+        /* Remove rounded corners */
+        padding: 1rem;
+        /* Reduce padding to fit smaller screens */
+    }
+
+    .login-form h2,
+    .register-form h2 {
+        font-size: 1.5rem;
+        /* Slightly reduce the font size for headings */
+    }
+
+    .login-form input,
+    .register-form input {
+        font-size: 0.875rem;
+        /* Adjust input font size */
+        padding: 0.75rem;
+        /* Reduce padding */
+    }
+
+    .login-form button,
+    .register-form button {
+        font-size: 1rem;
+        /* Adjust button font size */
+        padding: 0.75rem;
+        /* Reduce button padding */
+    }
+
+    .login-form .close-button,
+    .register-form .close-button {
+        font-size: 2rem;
+        /* Reduce close button size */
+        margin-bottom: 1rem;
+        /* Add some space below the close button */
+    }
+}
+
+.styled-select {
+    width: 100%;
+    max-width: 200px;
+    /* Adjust based on your design */
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    color: #333;
+    outline: none;
+    appearance: none;
+    /* Removes default dropdown arrow */
+    position: relative;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6"%3E%3Cpath fill="%23333" d="M0 0l5 6 5-6H0z"/%3E%3C/svg%3E');
+    /* Custom dropdown arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.styled-select:hover {
+    border-color: #888;
+}
+
+.styled-select:focus {
+    border-color: #3D5D82;
+    box-shadow: 0 0 5px rgba(61, 93, 130, 0.5);
+}
+
+.styled-select option {
+    color: #333;
+    background: #fff;
+    padding: 10px;
+}
+
+/* Optional: Customize the dropdown arrow and align it */
+.styled-select::after {
+    content: "▼";
+    position: absolute;
+    right: 10px;
+    pointer-events: none;
+}
+
+/* Responsive design: adjust width on smaller screens */
+@media (max-width: 768px) {
+    .styled-select {
+        width: 100%;
+    }
+}
+
+
+.an_container {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    /* Adjusted ratio: announcements take 2 parts, news takes 1.5 parts */
+    gap: 1.5dvw;
+    padding: 3rem;
+    max-width: 1400px;
+    margin: 2rem auto;
+}
+
+.announcement {
+    display: grid;
+    grid-template-columns: 2.5fr 1.5fr;
+    /* Set text to image ratio */
+    background-color: #fff;
+    padding: 1.8rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 1.5rem;
+    align-items: center;
+    /* Center content vertically */
+    margin: 0rem 1.5rem 1.5rem 1.5rem;
+}
+
+.announcement h2 {
+    margin: 0 0 10px;
+    font-size: 1.6em;
+    color: #333;
+}
+
+.announcement p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #666;
+    margin: 10px 0;
+}
+
+.announcement .text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.announcement img {
+    width: 300px;
+    /* Full width of the grid cell */
+    height: 180px;
+    border-radius: 1rem;
+    object-fit: contain;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#news-section {
+    background-color: #fff;
+    padding: 1.8rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    max-width: 100%;
+    height: auto;
+    /* Ensures it only takes needed height */
+    margin: 0 auto;
+    /* Center it if required */
+    align-self: flex-start;
+    /* Prevent flex stretching */
+}
+
+#news-section h3 {
+    font-size: 1.6em;
+    margin-bottom: 1.5rem;
+}
+
+.news-item {
+    margin-bottom: 1.2rem;
+}
+
+.news-item a {
+    font-weight: bold;
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 960px) {
+    .an_container {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+        max-width: 100%;
+    }
+
+    .announcement,
+    #news-section {
+        width: 100%;
+        /* Ensures equal width */
+        margin: 0 auto 1.5rem;
+        /* Centers each block and adds spacing */
+    }
+
+    #news-section {
+        order: 1;
+        /* Move the news section to the bottom */
+        margin-top: 1.5rem;
+    }
+}
+
+@media(max-width: 800px) {
+    body {
+        font-size: 12px;
+    }
+
+    .an_container {
+        grid-template-columns: 1fr;
+        padding: 0.25rem;
+        max-width: 100%;
+    }
+
+    .announcement {
+        grid-template-columns: 1fr;
+        /* Stack image and text vertically */
+        font-size: 12px;
+    }
+
+    .announcement img {
+        order: -1;
+        /* Move the image above the text */
+        margin-bottom: .15rem;
+        max-width: 100%;
+    }
+
+    .announcement .text-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 12px;
+    }
+
+    .announcement,
+    #news-section {
+        width: 90%;
+        /* Equal width for both blocks */
+        padding: 1.2rem;
+        margin: 0 auto 1.5rem;
+        font-size: 1rem;
+    }
+
+    #news-section {
+        order: 1;
+        /* Move the news section to the bottom */
+        margin-top: 1rem;
+    }
+
+    .announcement h2 {
+        margin: 0 0 0px;
+        font-size: 1.5em;
+        color: #333;
+    }
+
+    .announcement p {
+        font-size: 1rem;
+        line-height: 1;
+        color: #666;
+    }
+
+    .ann_link {
+        font-size: 1rem;
+        margin: 0 0 0px;
+
+    }
+
+    .logo-text {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        /* Adjusts spacing between logo and text */
+    }
+
+    .logo-text img {
+        height: 80px;
+        /* Adjust for a more proportionate logo size */
+        width: 75px;
+        border-radius: 10px;
+        margin-right: 10px;
+        margin-top: 20px;
+    }
+
+    .logo-text h1 {
+        font-size: 1.75rem;
+        /* Slightly larger for emphasis */
+        font-weight: 700;
+        margin: 0;
+        color: var(--text-light);
+    }
+}
